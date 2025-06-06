@@ -1,31 +1,29 @@
-Document technique – Label Studio
+# Document technique – Label Studio
 
 
-1 – démarrage de l’application
-	
-Dans un invite de commande conda (j’utilise anaconda_prompt) :
-conda activate label-studio
-		label-studio start
-Label studio va ensuite s’ouvrir dans le navigateur par défaut
+## 1 – installation et démarrage de l’application
 
-Penser à créer un compte, pour pouvoir retrouver les annotations et permettre à plusieurs personnes d’annoter et de tout mettre en commun
+Executer la commande suivant dans Docker
+```
+docker run -it -p 8080:8080 -v labelstudio-data:/label-studio/data heartexlabs/label-studio:latest
+```
+les annotations sont enregistrées en local sur le serveur Docker.
 
-
-2 – création d’un projet
+## 2 – création d’un projet
 Dans label studio, en haut à droite, « Create » pour créer un projet.
 3 onglets s’ouvrent à nous
 
-2.1) 1er onglet : Project Name
+### 2.1) 1er onglet : Project Name
 On renseigne juste de quoi différencier notre projet des autres : un nom et une description
 
-2.2) 2eme onglet : Data Import
+### 2.2) 2eme onglet : Data Import
 Le fichier contenant les informations des PDF sera un fichier texte organisé comme suit :
  
 Le texte de chaque PDF sera sur une seule ligne, l’exemple ci-dessus contient donc les données de 3 Documents PDF. Veiller à ne pas mettre de retour à la ligne dans le texte
 Lors de l’importation, cocher “treat csv/tsv as LIST OF TASKS”.
 Noter qu’il est possible d’importer d’autres fichiers par la suite si on veut rajouter des documents a annoter.
 
-2.3) 3eme onglet : Labelling Setup
+### 2.3) 3eme onglet : Labelling Setup
 Beaucoup de templates s’affichent, mais on va choisir « custom template » en bas a gauche. Puis, copier-coller le code suivant :
 ```
 <View style="display: flex; gap: 32px; height: 800px;">
@@ -102,15 +100,15 @@ Exemple : on cherche la valeur du Cmax
 ```
 		
 		
-3 – Annotation
+## 3 – Annotation
  
 Une vue d’ensemble est proposée, avec chaque entrée correspondante à un document, on peut cliquer sur le document que l’on souhaite annoter.
  
 Une fois le document sélectionné, indiquer la section à étudier (label « Relevent Section », en jaune) puis, mettre les labels sur les valeurs à l’intérieur de la section définie. Une fois les labels appliqués, cliquer sur « Submit ».
 Une fois que tous les documents sont annotés, il est temps d’exporter.
 
-4 – Exportation
-
+## 4 – Exportation
+ 
 Une fois l’annotation terminée, il faut exporter les données.
 Au format JSON, cela se structure comme suit :  
 ID du document
