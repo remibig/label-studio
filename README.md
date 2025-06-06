@@ -27,6 +27,7 @@ Noter qu’il est possible d’importer d’autres fichiers par la suite si on v
 
 2.3) 3eme onglet : Labelling Setup
 Beaucoup de templates s’affichent, mais on va choisir « custom template » en bas a gauche. Puis, copier-coller le code suivant :
+```
 <View style="display: flex; gap: 32px; height: 800px;">
 
    <!-- Left Column: Scrollable Document Viewer Only -->
@@ -89,13 +90,16 @@ selecting text spans."/>
    </View>
 
 </View>
+```
 
 Ce template est modifiable, ici, les indicateurs sont au nombre de 8 et nommés de V1 a V8, on peut en ajouter, en supprimer, ou changer leur nom et couleur en fonction de ce qu’on cherche.
 Exemple : on cherche la valeur du Cmax
+```
 <Header value="Question : What is the Cmax value?"/>
      	<Labels name="Cmax" toName="doc" choice="single">
        	<Label value="Cmax" background="#87CEEB"/>
      	</Labels>
+```
 		
 		
 3 – Annotation
