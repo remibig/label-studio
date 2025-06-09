@@ -17,11 +17,10 @@ Dans label studio, en haut à droite, « Create » pour créer un projet.
 On renseigne juste de quoi différencier notre projet des autres : un nom et une description
 
 ### 2.2) 2eme onglet : Data Import
-Le fichier contenant les informations des PDF sera un fichier texte organisé comme suit :
+Le fichier contenant les informations des PDF sera un fichier JSON organisé comme l'exemple fourni ```exemple.json```
  
-Le texte de chaque PDF sera sur une seule ligne, l’exemple ci-dessus contient donc les données de 3 Documents PDF. Veiller à ne pas mettre de retour à la ligne dans le texte
 Lors de l’importation, cocher “treat csv/tsv as LIST OF TASKS”.
-Noter qu’il est possible d’importer d’autres fichiers par la suite si on veut rajouter des documents a annoter.
+Noter qu’il est possible d’importer d’autres fichiers par la suite si on veut rajouter des documents plus tard.
 
 ### 2.3) 3eme onglet : Labelling Setup
 Beaucoup de templates s’affichent, mais on va choisir « custom template » en bas a gauche. Puis, copier-coller le code suivant :
@@ -110,8 +109,4 @@ Une fois que tous les documents sont annotés, il est temps d’exporter.
 ## 4 – Exportation
  
 Une fois l’annotation terminée, il faut exporter les données.
-Au format JSON, cela se structure comme suit :  
-ID du document
-ID de l’annotateur
-		1er label
-		2eme label…
+Au format JSON, cela se structure exactement comme l'exemple initial
