@@ -7,6 +7,8 @@ Executer la commande suivant dans Docker
 ```
 docker run -it -p 8080:8080 -v labelstudio-data:/label-studio/data heartexlabs/label-studio:latest
 ```
+puis se rendre sur navigateur a l'adresse ```http://localhost:8080/```
+
 les annotations sont enregistrées en local sur le serveur Docker.
 
 ## 2 – création d’un projet
